@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 36" width="20" height="36">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #c7d3ab;stroke-width: 2 } 
+	</style>
+	<path id="Стрелка правая" class="shp0" d="M0.39,35.98l19.01,-17.99l-19.02,-17.99" />
+</svg>

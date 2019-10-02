@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/pilates/favicon.ico><title>vue-pilates</title><link href=/pilates/css/app.745445bd.css rel=preload as=style><link href=/pilates/css/chunk-vendors.ef5277a6.css rel=preload as=style><link href=/pilates/js/app.62729e7d.js rel=preload as=script><link href=/pilates/js/chunk-vendors.0fbeb6d5.js rel=preload as=script><link href=/pilates/css/chunk-vendors.ef5277a6.css rel=stylesheet><link href=/pilates/css/app.745445bd.css rel=stylesheet></head><body><noscript><strong>We're sorry but vue-pilates doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js></script><script>$(document).ready(function(){
+            $("#menu").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 1500);
+            });
+        });</script><script src=/pilates/js/chunk-vendors.0fbeb6d5.js></script><script src=/pilates/js/app.62729e7d.js></script></body></html>
