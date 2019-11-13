@@ -1,26 +1,5 @@
 <template>
   <div id="app">
-    <section class="q-menu">
-      <div class="q-inner">
-        <img
-          class="q-menu__close"
-          src="./assets/img/close.png"
-          @click="closeMenu()"
-        />
-        <nav id="menu">
-          <ul class="q-menu__list">
-            <li style="position: relative">
-              <div class="active"></div>
-              <a href="#about">О пилатесе</a>
-            </li>
-            <li><a @click="closeMenu()" href="#timetables">Расписание и стоимость</a></li>
-            <li><a @click="closeMenu()" href="#occupation">Как проходят занятия</a></li>
-            <li><a @click="closeMenu()" href="#reviews">Отзывы</a></li>
-            <li><a @click="closeMenu()" href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
     <section class="q-header">
       <div class="q-inner">
         <div class="q-header__bg"></div>
@@ -48,7 +27,9 @@
             <div class="q-header__subtitle">
               <p>Твое здоровое тело через 10 занятий</p>
             </div>
-            <a class="q-header__button" href="#timetables">Cмотреть расписание</a>
+            <a class="q-header__button" href="#timetables"
+              >Cмотреть расписание</a
+            >
           </div>
           <div class="q-header__img">
             <div class="q-header__decor"></div>
@@ -102,113 +83,36 @@
         </div>
       </div>
     </section>
-    <section id="timetables" class="q-price">
+    <section class="q-menu">
       <div class="q-inner">
-        <div class="q-price__wrapper">
-          <div class="q-price__modal">
-            <img
-              class="q-price__modal--close"
-              src="./assets/img/close-black.png"
-              @click="closeMenuPrice()"
-              alt=""
-            />
-            <span class="q-price__modal--title"
-              >Хочешь записаться на занятие?</span
-            >
-            <span class="q-price__modal--subtitle"
-              >Оставьте контакты и наши менеджеры свяжуться в ближайшее
-              время</span
-            >
-            <div class="q-price__modal--container">
-              <input
-                class="q-price__modal--text"
-                type="text"
-                placeholder="Имя"
-              />
-              <input
-                class="q-price__modal--text"
-                type="text"
-                placeholder="Телефон"
-              />
-              <input
-                class="q-price__modal--text"
-                type="text"
-                placeholder="E-mail"
-              />
-            </div>
-            <div class="q-price__modal--container">
-              <div class="q-price__modal--mobile">
-                <input type="checkbox" id="check" />
-                <label class="q-price__modal--label" for="check"
-                  >Я согласен на обработку персональных данных</label
-                >
-              </div>
-              <button class="q-price__modal--button">Записаться</button>
-            </div>
-          </div>
-        </div>
-        <span class="q-price__title">Расписание и стоимость</span>
-        <div class="q-price__container">
-          <div class="q-price__block">
-            <span class="q-price__block--decor">01</span
-            ><span class="q-price__block--subtitle">Уровень</span
-            ><span class="q-price__block--title">Новичок</span
-            ><span class="q-price__block--learn">150 руб. / занятие</span>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">пн</span
-              ><span class="q-price__block--time">9:00 — 10:00</span>
-            </div>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">ср</span
-              ><span class="q-price__block--time">9:00 — 10:00</span>
-            </div>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">пт</span
-              ><span class="q-price__block--time">9:00 — 10:00</span>
-            </div>
-            <a @click="openMenuPrice()" class="q-price__button">Записаться</a>
-          </div>
-          <div class="q-price__block">
-            <span class="q-price__block--decor">02</span
-            ><span class="q-price__block--subtitle">Уровень</span
-            ><span class="q-price__block--title">Профи</span
-            ><span class="q-price__block--learn">200 руб. / занятие</span>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">пн</span
-              ><span class="q-price__block--time">18:15 — 19:45</span>
-            </div>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">ср</span
-              ><span class="q-price__block--time">18:15 — 19:45</span>
-            </div>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">пт</span
-              ><span class="q-price__block--time">18:15 — 19:45</span>
-            </div>
-            <a @click="openMenuPrice()" class="q-price__button">Записаться</a>
-          </div>
-          <div class="q-price__block">
-            <span class="q-price__block--decor">03</span
-            ><span class="q-price__block--subtitle">Уровень</span
-            ><span class="q-price__block--title">Мастер</span
-            ><span class="q-price__block--learn">350 руб. / занятие</span>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">пн</span
-              ><span class="q-price__block--time">20:00 — 21:30</span>
-            </div>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">ср</span
-              ><span class="q-price__block--time">20:00 — 21:00</span>
-            </div>
-            <div class="q-price__block--wrapper">
-              <span class="q-price__block--day">пт</span
-              ><span class="q-price__block--time">20:00 — 21:30</span>
-            </div>
-            <a @click="openMenuPrice()" class="q-price__button">Записаться</a>
-          </div>
-        </div>
+        <img
+          class="q-menu__close"
+          src="./assets/img/close.png"
+          @click="closeMenu()"
+        />
+        <nav id="menu">
+          <ul class="q-menu__list">
+            <li style="position: relative">
+              <div class="active"></div>
+              <a href="#about">О пилатесе</a>
+            </li>
+            <li>
+              <a @click="closeMenu()" href="#timetables"
+                >Расписание и стоимость</a
+              >
+            </li>
+            <li>
+              <a @click="closeMenu()" href="#occupation"
+                >Как проходят занятия</a
+              >
+            </li>
+            <li><a @click="closeMenu()" href="#reviews">Отзывы</a></li>
+            <li><a @click="closeMenu()" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
+
     <section id="occupation" class="q-plan">
       <div class="q-inner">
         <span class="q-plan__title">Как проходят занятия</span>
